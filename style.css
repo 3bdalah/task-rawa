@@ -472,11 +472,7 @@ body[dir="rtl"] .custom-table thead label::before {
   right: -30px;
 }
 
-body[dir="rtl"]
-  .custom-table
-  tbody
-  input[type="checkbox"]:checked
-  + label::before,
+.custom-table tbody input[type="checkbox"]:checked + label::before,
 .custom-table thead input[type="checkbox"]:checked + label::before {
   background-color: #57acdc;
 
@@ -502,6 +498,10 @@ body[dir="rtl"] .custom-table tbody label::after {
   font-size: 22px;
   color: #6e6e6e;
   margin-right: 10px;
+}
+
+body[dir="rtl"] .custom-table .label-check .icon-file {
+  margin-left: 10px;
 }
 /* start style pagination */
 .pagination {
