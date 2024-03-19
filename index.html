@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body dir="ltr">
+    <section class="app-root">
+      <aside class="sidebar">
+        <h1 class="logo-app">Droppex</h1>
+
+        <nav class="navbar">
+          <button class="btn-new-folder">
+            <i class="fa fa-file icon"></i> New Folder
+          </button>
+          <ul class="list-links">
+            <li class="link-item active">
+              <a href="#" class="link">
+                <i class="fa fa-file icon-width"></i
+                ><span class="text-link">Home</span></a
+              >
+            </li>
+            <li class="link-item">
+              <a href="#" class="link">
+                <i class="fa fa-trash icon-width"></i
+                ><span class="text-link">trash</span></a
+              >
+            </li>
+            <hr class="line" />
+            <li class="link-item">
+              <a href="#" class="link">
+                <i class="fa fa-trash icon-width"></i
+                ><span class="text-link">storage</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- <hr class="line" /> -->
+
+        <!-- <ul class="list-storage">
+          <li class="link-item">
+            <a href="#" class="link-storage">
+              <i class="fa fa-trash icon-width"></i
+              ><span class="text-link">Storage</span></a
+            >
+          </li>
+        </ul> -->
+
+        <div class="storage">
+          <div class="card-storage">
+            <div class="progress">
+              <div class="content">10%</div>
+            </div>
+            <span class="capcity">10GB / 100GB</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="right-part">
+        <form class="part-form">
+          <div class="search-content">
+            <i class="fa fa-search icon-search"></i>
+            <input
+              class="input-search"
+              type="search"
+              placeholder="Search for file, folder, shared storehouse"
+            />
+            <button class="btn-filter">
+              <i class="fa fa-filter"></i>
+            </button>
+          </div>
+          <button class="custom-button">
+            <i class="fa fa-file icon-input"></i>
+            <input type="file" placeholder="drag drop" class="file-input" />
+            <span
+              >Drag and drop <a href="#"> files</a>, <a href="#"> folders</a> or
+              <a href="#">links</a> links</span
+            >
+          </button>
+          <button class="btn-none-style"><i class="fa fa-link"></i></button>
+          <button class="user btn-none-style">
+            <i class="fa fa-user"></i>
+          </button>
+        </form>
+        <div class="info-user">
+          <span class="username">ramy drrive file</span>
+          <span><i class="fa fa-circle-info icon-info"></i></span>
+        </div>
+
+        <div class="body-filter">
+          <span class="selected-files">
+            <span>Select folder or file to see options</span>
+            <span>No item selected</span>
+          </span>
+          <span class="two-icon">
+            <span class="icon-filter" tabindex="0"
+              ><i class="fa-solid fa-arrow-down-up-across-line"></i
+            ></span>
+            <span class="icon-filter" tabindex="0"
+              ><i class="fa fa-filter"></i
+            ></span>
+          </span>
+          <span class="four-icon">
+            <span class="icon-filter" tabindex="0">
+              <i class="fa-solid fa-eye-slash"></i
+            ></span>
+            <span class="icon-filter" tabindex="0"
+              ><i class="fa-regular fa-square-check"></i
+            ></span>
+            <span class="icon-filter" tabindex="0"
+              ><i class="fa-solid fa-grip-vertical"></i
+            ></span>
+            <span class="icon-filter" tabindex="0"
+              ><i class="fa-regular fa-square-caret-left"></i></span
+          ></span>
+        </div>
+        <div class="table-container">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>
+                  <span class="thead-title"
+                    ><input
+                      type="checkbox"
+                      id="myCheckboxTitle"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckboxTitle" class="label-check">
+                      Name
+                    </label>
+                  </span>
+                </th>
+                <th class="thead-title">uploaded</th>
+                <th class="thead-title">size</th>
+                <th class="thead-title">view No</th>
+                <th class="thead-title last-modified">
+                  last modified
+                  <span class="icon-modified"
+                    ><i class="fa-solid fa-arrow-down"></i
+                  ></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox1"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox1" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox2"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox2" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox3"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox3" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox4"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox4" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox5"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox5" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox6"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox6" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    ><input
+                      type="checkbox"
+                      id="myCheckbox7"
+                      name="myCheckbox"
+                    />
+
+                    <label for="myCheckbox7" class="label-check">
+                      <i class="fa fa-file icon-file"></i> Documents
+                    </label>
+                  </span>
+                </td>
+                <td>Nov 26, 2022 3:18AM</td>
+                <td>1.8 MB</td>
+                <td>0 times</td>
+                <td>Dec 10, 2022 2:00PM you</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="pagination">
+            <ul class="list">
+              <li>Prev</li>
+              <li class="active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li class="dotted">.....</li>
+
+              <li>22</li>
+              <li>Next</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
